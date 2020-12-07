@@ -55,4 +55,24 @@ with open(file) as fp:
             v +=1
         linenum += 1
 print(a*b*c*d*e)
+#############################
+file = "inputd3.txt"
+
+def treenum(right, down=1):
+    counter=0
+    x=0
+    #y=0
+    f=open(file,'r')
+    for y,line in enumerate(f):
+        line=line.strip()
+        if y%down==0:
+            if line[x%len(line)]=='#':
+                counter +=1
+            x += right    
+        #y += 1                  
+    return counter
+print(treenum(3))
+print(treenum(1)*treenum(3)*treenum(5)*treenum(7)*treenum(1,2))
+
+###############
 
