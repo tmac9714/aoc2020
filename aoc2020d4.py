@@ -11,6 +11,9 @@ os.getcwd()
 os.chdir("./aoc2020")
 
 file="inputd4.txt"
+
+keys={"byr","iyr","eyr","hgt","hcl","ecl","pid"}
+
 f=open(file).read().split("\n\n")
 for line in f:
     passport =line.split()
